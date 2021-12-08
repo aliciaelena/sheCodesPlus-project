@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Current Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <input
+        type="text"
+        placeholder="Enter city here..."
+        autofocus
+        id="input"
+      />
+      <input type="submit" value="Go" class="submit" id="submit" />
+      <button class="current-temp" id="current-temp">Current</button>
+      <h1>Vienna</h1>
+      <h2>The World <br />🌎﻿</h2>
+      <div class="row current">
+        <div class="col-2">
+          <h3>
+            <span id="degrees"> 23</span>
+            <span class="degrees"> °C </span>
+          </h3>
+          <span id="date"></span>
+        </div>
+        <div class="col-4">
+          Wind: <span id="wind">2</span> km/h
+          <br />
+          Precipitation: 0%
+          <br />
+          Humidity: <span id="humidity">40</span>%
+        </div>
+        <div class="col-2">
+          <img src=images/suncloud.png alt="Sun" class="sun-clouds"/>
+        </div>
+      </div>
+      <hr />
+      <div class="row weather">
+        <div class="col-2">
+          <span class="small"> Forecast </span>
+        </div>
+        <div class="col-1">Mo</div>
+        <div class="col-1">Tue</div>
+        <div class="col-1">Wed</div>
+        <div class="col-1">Thu</div>
+        <div class="col-1">Fri</div>
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-1">
+            <img src=images/sun.png alt="Sun" class="sun"/>
+          </div>
+          <div class="col-1">
+            <img src=images/cloud.png alt="Sun" class="clouds"/>
+          </div>
+          <div class="col-1">
+            <img src=images/rain.png alt="Sun" class="rain"/>
+          </div>
+          <div class="col-1">
+            <img src=images/sun.png alt="Sun" class="sun"/>
+          </div>
+          <div class="col-1">
+            <img src=images/suncloud.png alt="Sun" class="sun-clouds-small"/>
+          </div>
+        </div>
+        <div class="row weather">
+          <div class="col-2">
+            <span class="small">Average Temperature </span>
+          </div>
+          <div class="col-1">21°C</div>
+          <div class="col-1">19°C</div>
+          <div class="col-1">17°C</div>
+          <div class="col-1">19°C</div>
+          <div class="col-1">18°C</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <span class="small">Chances of Rain</span>
+        </div>
+        <div class="col-1">0%</div>
+        <div class="col-1">30%</div>
+        <div class="col-1">70%</div>
+        <div class="col-1">0%</div>
+        <div class="col-1">5%</div>
+      </div>
+      <button class="Europe">Paris</button>
+      <br />
+      <button class="USA">New York</button>
+      <br />
+      <button class="Asia">Tokyo</button>
+      <br />
+      <button class="Oceania">Sydney</button>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
